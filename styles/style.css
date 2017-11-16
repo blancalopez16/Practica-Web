@@ -1,0 +1,220 @@
+
+* {
+    font-family: 'Josefin Slab', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    --main-text-color: rgba(238, 116, 167, 0,73);
+    --secondary-text-color: #2C2168;
+}
+
+.clearfix:after {
+    content:"";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+.header > .title-img {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../images/fotoheader.jpg);
+    height: 100vh;
+    transition: background-size 0.5s;
+}
+
+.header > .title-img:hover{
+    background-size: 115% 115%;
+}
+
+
+.navbar {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar > .navbar-list {
+    list-style: none;
+    margin: 0;
+    float: center;
+}
+
+.navbar > .navbar-list > .navbar-item {
+    display: inline;
+    font-size: 20px;
+}
+
+.navbar > .navbar-list > .navbar-item a {
+    font-size: 30px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--main-text-color);
+    display: inline-block;
+    transition: all 0.6s linear;
+}
+
+
+  .navbar > .navbar-list > .navbar-item a:hover {
+      color: var(--secondary-text-color);
+      background-color: white
+}
+
+  .navbar > .navbar-list > .navbar-item.active a {
+    color: var(--secondary-text-color);
+    background-color: var(var(--none-text-color));
+}
+
+.section-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.section-reverse {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--main-text-color);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+
+.about-me > .Me-info {
+    float: right;
+    max-width: 50%;
+}
+
+
+.bio {
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+
+.flip {
+    height: 305px;
+    position: relative;
+}
+
+.flip-img {
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 1s;
+}
+
+.back {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.flip:hover .front {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.flip:hover .back {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead > tr {
+    background-color: rgb(120, 167, 119);
+}
+
+th {
+    height: 50px;
+}
+
+th, td {
+    padding: 1px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+tbody > tr:hover {
+    background-color:#c0eec0;
+}
+
+#googleMap {
+    height: 400px;
+}
+
+.form {
+    padding: 0 20px;
+}
+
+.form .form-row {
+    padding: 10px;
+}
+
+input {
+    padding: 4px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+}
+
+button[disabled] {
+    opacity: 0.5;
+}
+
+input[type=button], input[type=submit], button {
+    background-color: rgb(175, 173, 76);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.quien-soy > .biotext {
+    
+    float: left;
+    max-width: 50%;
+    }
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    color: var(--main-text-color);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@keyframes titleAnimation {
+    0% {
+        font-size: 200px;
+    }
+
+    50% {
+        font-size: 180px;
+    }
+
+    100% {
+        font-size: 100px;
+        visibility: visible;
+    }
+}
